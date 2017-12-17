@@ -2,7 +2,7 @@
  * @Author: cq 
  * @Date: 2017-10-07 20:46:15 
  * @Last Modified by: cq
- * @Last Modified time: 2017-12-12 15:05:40
+ * @Last Modified time: 2017-12-17 10:51:54
  */
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -54,7 +54,6 @@ module.exports = function (env, argv) {
         context: argv.context,
         devtool: env.prod ? "source-map" : false,
         plugins: [
-            new webpack.LoaderOptionsPlugin({options: {postcss: [autoprefixer]}}),
             new ExtractTextPlugin({
                 filename: 'css/[name].css?[hash:5]',
                 ignoreOrder: true

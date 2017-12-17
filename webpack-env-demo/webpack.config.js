@@ -2,7 +2,7 @@
  * @Author: cq 
  * @Date: 2017-12-12 11:34:42 
  * @Last Modified by: cq
- * @Last Modified time: 2017-12-12 15:05:32
+ * @Last Modified time: 2017-12-17 10:59:53
  */
 
 
@@ -23,7 +23,7 @@ const env = {
 //导出公共配置
 module.exports = WebpackMerge(BaseConfig(env, {
     "entry": {
-        main: "./src/js/main.js"
+        main: "./src/main.js"
     },
     "output": {
         path: path.resolve(__dirname, "build"),
