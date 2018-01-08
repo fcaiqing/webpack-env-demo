@@ -2,7 +2,7 @@
  * @Author: cq 
  * @Date: 2017-10-07 20:46:15 
  * @Last Modified by: cq
- * @Last Modified time: 2017-12-17 10:51:54
+ * @Last Modified time: 2018-01-08 10:30:15
  */
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -41,7 +41,29 @@ module.exports = function (env, argv) {
                 },
                 {
                     test: /\.vue$/,
-                    use: 'vue-loader'
+                    use: {
+                        loader: 'vue-loader',
+                        options: {
+                            loaders: {
+                                sass: ExtractTextPlugin.extract({
+                                    use: ['css-loader', 'postcss-loader', 'sass-loader'],
+                                    fallback: 'vue-style-loader'
+                                })
+                            }
+                        }
+                    }
+                },
+                {
+                    test: /\.(png|jpg|gif)$/,
+                    use: [
+                        {
+                            loader: 'url-loader',
+                            options: {
+                                name:"../img/[name].[ext]?[hash:5]",
+                                limit: 8192
+                            }
+                        }
+                    ]
                 }
             ]
         },
