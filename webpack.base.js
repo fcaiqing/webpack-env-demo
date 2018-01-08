@@ -2,7 +2,7 @@
  * @Author: cq 
  * @Date: 2017-10-07 20:46:15 
  * @Last Modified by: cq
- * @Last Modified time: 2018-01-08 15:30:36
+ * @Last Modified time: 2018-01-08 17:38:07
  */
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -59,8 +59,9 @@ module.exports = function (env, argv) {
                         {
                             loader: 'url-loader',
                             options: {
-                                name:"assets/img/[name].[ext]?[hash:5]",    //图片路径和文件名格式
-                                limit: 8192
+                                name:"../img/[name].[ext]?[hash:5]",//css文件中图片生成路径和文件名格式
+                                limit: 8192,
+                                emitFile: false     //是否生成文件
                             }
                         }
                     ]
