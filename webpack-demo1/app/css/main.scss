@@ -1,0 +1,308 @@
+html,body, div {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #010101;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .container-b {
+        position: relative;
+        width: 1564px;
+        height: 880px;
+        background: url("../img/bg.png") 0 0/100% 100% no-repeat;
+        .ct-b {
+            position: relative;
+            width: 962px;
+            height: 642px;
+            margin: 194px auto auto;
+            .name {
+                position: absolute;
+                top: 18px;
+                left: 219px;
+                width: 720px;
+                height: 85px;
+                background: url("../img/name.png") 0 0/100% no-repeat;
+            }
+            .person1 {
+                position: absolute;
+                top: -17px;
+                left: -33px;
+                width: 398px;
+                height: 472px;
+                background: url("../img/per1.png") 0 0 / 100% no-repeat;
+                .box {
+                    position: absolute;
+                    left: 20px;
+                    width: 98px;
+                    height: 100px;
+                }
+                .box1 {
+                    top: 125px;
+                    background: url("../img/l1.png") 0 0 / 100% no-repeat;
+                } 
+                .box2 {
+                    top: 188px;
+                    background: url("../img/l2.png") 0 0 / 100% no-repeat;
+                }
+                .box3 {
+                    top: 253px;
+                    background: url("../img/l3.png") 0 0 / 100% no-repeat;
+                }
+                .box4 {
+                    top: 314px;
+                    background: url("../img/l4.png") 0 0 / 100% no-repeat;
+                }
+             }
+             .person2 {
+                position: absolute;
+                top: -81px;
+                left: 266px;
+                width: 431px;
+                height: 467px;
+                background: url("../img/per2.png") 0 0 / 100% no-repeat;
+                .box {
+                    position: absolute;
+                    width: 98px;
+                    height: 100px;
+                    left: 52px;
+                }
+                .box1 {
+                    width: 122px;
+                    height: 123px;
+                    top: 177px;
+                    left: 40px;
+                    background: url("../img/m1.png") 0 0 / 100% no-repeat;
+                } 
+                .box2 {
+                    width: 109px;
+                    height: 111px;
+                    top: 247px;
+                    left: 47px;
+                    background: url("../img/m2.png") 0 0 / 100% no-repeat;
+                }
+                .box3 {
+                    top: 317px;
+                    background: url("../img/m3.png") 0 0 / 100% no-repeat;
+                }
+                .box4 {
+                    top: 378px;
+                    background: url("../img/m4.png") 0 0 / 100% no-repeat;
+                }
+             }
+             .person3 {
+                position: absolute;
+                top: -26px;
+                left: 657px;
+                width: 463px;
+                height: 488px;
+                background: url("../img/per3.png") 0 0 / 100% no-repeat;
+                .box {
+                    position: absolute;
+                    width: 98px;
+                    height: 100px;
+                    left: 17px;
+                }
+                .box1 {
+                    width: 122px;
+                    height: 124px;
+                    top: 122px;
+                    left: 5px;
+                    background: url("../img/r1.png") 0 0 / 100% no-repeat;
+                } 
+                .box2 {
+                    width: 109px;
+                    height: 110px;
+                    top: 193px;
+                    left: 12px;
+                    background: url("../img/r2.png") 0 0 / 100% no-repeat;
+                }
+                .box3 {
+                    top: 263px;
+                    background: url("../img/r3.png") 0 0 / 100% no-repeat;
+                }
+                .box4 {
+                    top: 324px;
+                    background: url("../img/r4.png") 0 0 / 100% no-repeat;
+                }
+             }
+             .person1:hover {
+                background: url("../img/per1-h.png") 0 0 / 100% no-repeat;
+             }
+             .person2:hover {
+                background: url("../img/per2-h.png") 0 0 / 100% no-repeat;
+             }
+             .person3:hover {
+                background: url("../img/per3-h.png") 0 0 / 100% no-repeat;
+             }
+             .btns {
+                 .btn {
+                    position: absolute;
+                    width: 163px;
+                    height: 47px;
+                 }
+                 .btn-l {
+                    top: 419px;
+                    left: 239px;
+                    background: url("../img/btn-l.png") 0 0 / 100% no-repeat;
+                 }
+                 .btn-r {
+                    top: 419px;
+                    left: 569px;
+                    background: url("../img/btn-r.png") 0 0 / 100% no-repeat;
+                 }
+                 .btn-c {
+                    width: 157px;
+                    height: 146px;
+                    top: 357px;
+                    left: 409px;
+                    background: url("../img/btn-c.gif") 0 0 / 100% no-repeat;
+                 }
+             }
+             .box1 .get-icon1 {
+                background: url("../img/get1.png") 0 0 / 100% no-repeat;
+                animation:  wordFlash 0.4s linear infinite;
+             }
+             .box2:hover .get-icon2 {
+                background: url("../img/get1.png") 0 0 / 100% no-repeat;
+                animation:  wordFlash 0.4s linear infinite;
+            }
+             .box3:hover .get-icon3 {
+                background: url("../img/get1.png") 0 0 / 100% no-repeat;
+                animation:  wordFlash 0.4s linear infinite;
+             }
+             .box4:hover .get-icon4 {
+                background: url("../img/get1.png") 0 0 / 100% no-repeat;
+                animation:  wordFlash 0.4s linear infinite;
+            }
+             .get-icon {
+                width: 52px;
+                height: 37px;
+                margin: calc(50% - 37px / 2) auto auto;
+                background: transparent;
+            }
+            .carousel-c {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 962px + 21px;
+                height: 128px;
+                display: flex;
+                justify-content: space-between;
+                a {
+                    display: inline-block;
+                    background: transparent;
+                }
+                .car {
+                    width: 123px!important;
+                    height: 125px!important;
+                }
+                .click-g {
+                    width: 75px;
+                    height: 26px;
+                    margin: calc(50% - 26px / 2) auto auto;
+                    background: transparent;
+                }
+                .car1 {
+                    width: 104px;
+                    height: 117px;
+                    background: transparent url("../img/car1.gif") 0 0 / 100% no-repeat;
+                }
+                .car2 {
+                    width: 104px;
+                    height: 129px;
+                    background: transparent url("../img/car2.gif") 0 0 / 100% no-repeat;
+                }
+                .car3 {
+                    width: 114px;
+                    height: 116px;
+                    background: transparent url("../img/car3.gif") 0 0 / 100% no-repeat;
+                }
+                .car4 {
+                    width: 106px;
+                    height: 111px;
+                    background: transparent url("../img/car4.gif") 0 0 / 100% no-repeat;
+                }
+                .car5 {
+                    width: 106px;
+                    height: 113px;
+                    background: transparent url("../img/car5.gif") 0 0 / 100% no-repeat;
+                }
+                .car6 {
+                    width: 104px;
+                    height: 113px;
+                    background: transparent url("../img/car6.gif") 0 0 / 100% no-repeat;
+                }
+                .car7 {
+                    width: 112px;
+                    height: 109px;
+                    background: transparent url("../img/car7.gif") 0 0 / 100% no-repeat;
+                }
+                .car8 {
+                    width: 123px;
+                    height: 115px;
+                    background: transparent url("../img/car8.gif") 0 0 / 100% no-repeat;
+                }
+                .car1:hover .click-g, .car2:hover .click-g, .car3:hover .click-g,
+                .car4:hover .click-g, .car5:hover .click-g, .car6:hover .click-g,
+                .car7:hover .click-g, .car8:hover .click-g {
+                    background: url("../img/click-g.png") 0 0 / 100% no-repeat;
+                }
+                .carousel-c:hover.marquee {
+                    transform: translateX(0);
+                    animation: marquee 1.0s linear infinite;
+                }
+            }
+        }
+    }
+}
+@keyframes wordFlash {
+    0% {
+        background-image: url("../img/get1.png")
+    }
+    50% {
+        background-image: url("../img/get2.png")
+    }
+    100% {
+        background-image: url("../img/get1.png")
+    }
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(-110px);
+    }
+    12.5% {
+        transform: translateX(-220px);
+    }
+    25.0% {
+        transform: translateX(-330px);
+    }
+    37.5% {
+        transform: translateX(-440px);
+    }
+    50.0% {
+        transform: translateX(-550px);
+    }
+    62.5% {
+        transform: translateX(-660px);
+    }
+    75.0% {
+        transform: translateX(-770px);
+    }
+    87.5% {
+        transform: translateX(-880px);
+    }
+    100% {
+        transform: translateX(-990px);
+    }
+}
+.carousel-c.marquee {
+    transform: translateX(0);
+    animation: marquee 5.0s linear infinite;
+}

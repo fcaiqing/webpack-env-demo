@@ -2,12 +2,13 @@
  * @Author: cq 
  * @Date: 2017-10-07 20:46:15 
  * @Last Modified by: cq
- * @Last Modified time: 2018-01-08 17:38:07
+ * @Last Modified time: 2018-02-12 09:55:35
  */
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const webpack=require('webpack');
+const path = require("path");
+var  ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = function (env, argv) {
     return {
@@ -18,26 +19,21 @@ module.exports = function (env, argv) {
                 {
                     test: /\.js$/,
                     exclude: /(node_modules|bower_components)/,
-                    use: {
-                      loader: 'babel-loader',
-                      options: {
-                        presets: ['env']
-                      }
-                    }
+                    use: 'babel-loader'
                 },
                 {
                     test: /\.css$/,
                     use: ExtractTextPlugin.extract({
                         fallback: "style-loader",
-                        use: ["css-loader", "postcss-loader"]
+                        use: ["css-loader", "postcss-loader"],
                     })
                 },
                 {
                     test: /\.scss$/,
                     use: ExtractTextPlugin.extract({
                             fallback: "style-loader",
-                            use: ['css-loader', 'postcss-loader', 'sass-loader']
-                    })
+                            use: ['css-loader', 'postcss-loader', 'sass-loader'],
+                        })
                 },
                 {
                     test: /\.vue$/,
@@ -59,28 +55,28 @@ module.exports = function (env, argv) {
                         {
                             loader: 'url-loader',
                             options: {
-                                name:"../img/[name].[ext]?[hash:5]",//css文件中图片生成路径和文件名格式
+                                name:"img/[name].[ext]?[hash:5]",//css文件中图片生成路径和文件名格式
                                 limit: 8192,
-                                emitFile: false     //是否生成文件
+                                publicPath: "../"
                             }
                         }
                     ]
-                }
+                },
             ]
         },
         resolve: {
             extensions: [".js", ".json", ".jsx", ".css", ".vue"],
             alias: {
-                'vue$': 'vue/dist/vue.js'
+                'vue$': 'vue/dist/vue.js',
+                'jquery$': path.resolve(argv.context, 'src/js/libs/jquery-3.1.1.min'),
+                'jqPagination$': path.resolve(argv.context, 'src/js/libs/jquery.pagination.min'),
+                'jqPage$': path.resolve(argv.context, 'src/js/libs/jquery.paging.min'),
             }
         },
         context: argv.context,
         devtool: env.prod ? "source-map" : false,
         plugins: [
-            new ExtractTextPlugin({
-                filename: 'css/[name].css?[hash:5]',
-                ignoreOrder: true
-            }),
+
         ]
     }
 }
